@@ -79,9 +79,20 @@ public class ControllerLogin {
         window.setScene(scene);
         window.show();
     }
+
+    public void setSceneHistory(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("History.fxml"));
+        Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root, 1083, 690);
+        window.getIcons().add(new Image(getClass().getResourceAsStream("book.png")));
+        window.setTitle("Hust English App");
+        window.setScene(scene);
+        window.show();
+    }
     public void undo(ActionEvent event) throws IOException {
         setSceneHome(event);
     }
+
     public void setSceneLogin(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         Stage primaryStage = (Stage)((Node) event.getSource()).getScene().getWindow();

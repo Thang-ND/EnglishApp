@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="690.0" prefWidth="1083.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HistoryController">
+    <children>
+        <Pane layoutY="-1.0" prefHeight="211.0" prefWidth="1094.0" style="-fx-background-color: #00BFFF;">
+            <children>
+                <Label layoutX="199.0" layoutY="48.0" text="KeepLearning" textFill="#faf7f7">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <Label layoutX="199.0" layoutY="129.0" text="Hust Student" textFill="#f2ecec">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="178.0" fitWidth="119.0" layoutX="47.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Image/bk.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+      <HBox layoutX="855.0" layoutY="43.0" prefHeight="30.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="25.0" prefWidth="84.0" text="Welcome :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vũ Xuân Khánh" wrappingWidth="119.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="855.0" layoutY="103.0" prefHeight="50.0" prefWidth="170.0">
+         <children>
+            <Label prefHeight="26.0" prefWidth="74.0" text="Log out : ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button alignment="TOP_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#logout" prefHeight="38.0" prefWidth="70.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <Text fontSmoothingType="LCD" layoutX="855.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Today is good day to learn !">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="671.0" layoutY="413.0" mnemonicParsing="false" onAction="#changeToChart" prefHeight="38.0" prefWidth="74.0" text="Biểu đồ" />
+      <Button layoutX="772.0" layoutY="413.0" mnemonicParsing="false" onAction="#changToTable" prefHeight="38.0" prefWidth="74.0" text="Bảng" />
+      <StackPane fx:id="stackPane" layoutY="211.0" prefHeight="479.0" prefWidth="602.0">
+         <children>
+            <LineChart fx:id="lineChart">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <TableView prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="301.6000183224678" text="Vòng số" />
+                <TableColumn prefWidth="300.79998779296875" text="Điểm số" />
+              </columns>
+            </TableView>
+         </children>
+      </StackPane>
+      <Button layoutX="880.0" layoutY="221.0" mnemonicParsing="false" onAction="#setSceneHome" prefHeight="32.0" prefWidth="60.0">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/left-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>
