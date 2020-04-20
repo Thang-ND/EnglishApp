@@ -110,7 +110,32 @@ public class ControllerLogin {
     public void logout(ActionEvent event) throws IOException {
         setSceneLogin(event);
     }
+    public void Account(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("Accounts.fxml"));
+        Stage window = new Stage();
+        Scene scene = new Scene(root);
+        window.setTitle("Accounts");
+        window.setScene(scene);
+        window.show();
+    }
+    public void ChangePassword(ActionEvent event) throws IOException{
+        Parent root  = FXMLLoader.load(getClass().getResource("ChangesPassWord.fxml"));
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        window.setTitle("Change Password");
 
+        window.setScene(scene);
+        window.show();
+    }
+    @FXML
+    public void BackAccounts(ActionEvent event) throws IOException {
+        Parent account = FXMLLoader.load(getClass().getResource("Accounts.fxml"));
+        Scene scene = new Scene(account);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setTitle("ACCOUNTS");
+        window.setScene(scene);
+        window.show();
+    }
     public void setTextChallenge1(ActionEvent event){
         this.textChallenge.setText("Level 1");
     }
